@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import FullName from './component/profile/FullName';
+import Address from './component/profile/Address';
+import PhotoProfil from './component/profile/PhotoProfil';
+import NavBar from './component/profile/NavBar';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+class App extends Component{
+  render(){
+    return(
+      
+      <div style={{border: '5px solid red', maxWidth:''}}>
+        <NavBar/>
+       <FullName/>
+       <Address/>
+       <PhotoProfil/>
+       
+       </div>
+  
   );
+  }
 }
 
 export default App;
